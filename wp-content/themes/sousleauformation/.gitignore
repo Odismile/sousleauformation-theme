@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Build output
+assets/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+
+!wp-content/plugins/advanced-custom-fields
+!wp-content/plugins/acf-extended
+!wp-content/plugins/svg-support
+!wp-content/plugins/gutenberg
+!wp-content/plugins/regenerate-thumbnails
+!wp-content/plugins/svg-support
+!wp-content/plugins/wordpress-seo
+
+
