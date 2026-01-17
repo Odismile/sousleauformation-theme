@@ -1,39 +1,50 @@
 <?php get_header(); ?>
 
+<main class="container">
 
-<main class="container py-5">
+    <?php get_template_part('partials/hero-simple'); ?>
+
     <?php
-    $title = get_field('title_hero') ?: '';
-    $description = get_field('description_hero') ?: '';
-    $block_id = 'hero-simple-' . uniqid();
+    $args = [
+        'post_type'      => 'post',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+    ];
 
-    var_dump($title, $description);
-    ?>
+    $query = new WP_Query($args);
 
-<section id="<?php echo esc_attr($block_id); ?>" class="hero-simple py-5">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col text-center">
-                <?php if ($title) : ?>
-                    <h1><?php echo esc_html($title); ?></h1>
-                <?php endif; ?>
+    if ($query->have_posts()) :
+        echo '<div class="row g-4">';
 
-                <?php if ($description) : ?>
-                    <p><?php echo esc_html($description); ?></p>
-                <?php endif; ?>
+        while ($query->have_posts()) :
+            $query->the_post();
+            ?>
+            <div class="col-md-4">
+                <article class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <?php the_title(); ?>
+                        </h3>
+
+                        <p class="card-text">
+                            <?php the_excerpt(); ?>
+                        </p>
+
+                        <a href="<?php the_permalink(); ?>" class="btn btn-primary">Lire plus</a>
+                    </div>
+                </article>
             </div>
-        </div>
-    </div>
-</section>
-    <?php get_template_part('blocks/hero-simple/hero-simple'); ?>
-    <?php
-    if (have_posts()) :
-        while (have_posts()) : the_post();
-        the_content();
+            <?php
         endwhile;
+
+        echo '</div>';
+
+        wp_reset_postdata();
+    else :
+        echo '<p>Aucun loisir trouvé.</p>';
     endif;
     ?>
-</main>
 
+</main>
 
 <?php get_footer(); ?>
