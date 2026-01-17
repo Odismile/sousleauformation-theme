@@ -24,7 +24,10 @@
                 </div>
             </div>
         <?php endwhile; ?>
-
+        <p>*Tout autre session peut être organisée à votre convenance si vous êtes au moins 6 candidats.</p>
+        <div class="button-wrapper">
+            <a href="" class="btn btn-primary">Réserver ma place</a>
+        </div>
     </div>
 </section>
 <?php endif; ?>
