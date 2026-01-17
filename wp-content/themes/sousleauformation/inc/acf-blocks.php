@@ -88,3 +88,25 @@ add_action('acf/init', function() {
 
     }
 });
+
+add_action('acf/init', function() {
+    if (function_exists('acf_register_block_type')) {
+
+        acf_register_block_type([
+            'name'              => 'push',
+            'title'             => __('Push'),
+            'description'       => __('Bloc push'),
+            'render_template'   => get_template_directory() . '/blocks/push/push.php',
+            'category'          => 'formatting',
+            'icon'              => 'arrow-right',
+            'mode'              => 'edit',
+            'keywords'          => ['push', 'contact'],
+            'supports'          => [
+                'align' => ['wide', 'full'],
+                'mode'  => false,
+                'jsx'   => true
+            ]
+        ]);
+
+    }
+});
