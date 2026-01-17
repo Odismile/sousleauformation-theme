@@ -1,0 +1,55 @@
+header {
+  &.navbar {
+    height: 84px;
+    position: relative;
+    transition: all 0.3s ease;
+
+    .navbar-brand {
+      font-size: 18px;
+      font-weight: 700;
+      color: color(white);
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+
+      @media (min-width: $md) {
+        font-size: 24px;
+      }
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .menu-item {
+      font-size: 18px;
+      font-weight: 600;
+      color: color(white);
+      transition: all 0.2s ease;
+    }
+
+    background-color: color(secondary);
+
+    body.home & {
+      background-color: transparent;
+
+      &.sticky {
+        background-color: color(secondary);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 70px;
+      }
+    }
+
+    &.sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
