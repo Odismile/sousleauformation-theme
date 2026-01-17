@@ -1,0 +1,69 @@
+{
+    "key": "group_696bc47372696",
+    "title": "<Block> Liste Formations",
+    "fields": [
+        {
+            "key": "field_696bc60000001",
+            "label": "Liste formations",
+            "name": "liste_formations",
+            "type": "repeater",
+            "layout": "row",
+            "button_label": "Ajouter une formation",
+            "sub_fields": [
+                {
+                    "key": "field_696bc60000002",
+                    "label": "Icône",
+                    "name": "icone",
+                    "type": "image",
+                    "return_format": "id",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_696bc60000003",
+                    "label": "Titre",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_696bc60000004",
+                    "label": "Sous-titre",
+                    "name": "subtitle",
+                    "type": "text"
+                },
+                {
+                    "key": "field_696bc60000005",
+                    "label": "Texte",
+                    "name": "text",
+                    "type": "text"
+                },
+                {
+                    "key": "field_696bc60000006",
+                    "label": "Liste informations",
+                    "name": "liste_informations",
+                    "type": "repeater",
+                    "layout": "table",
+                    "button_label": "Ajouter une information",
+                    "sub_fields": [
+                        {
+                            "key": "field_696bc60000007",
+                            "label": "Information",
+                            "name": "info_text",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/liste-formations"
+            }
+        ]
+    ],
+    "active": true,
+    "acfe_autosync": ["json"]
+}

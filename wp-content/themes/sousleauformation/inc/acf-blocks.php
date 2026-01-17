@@ -110,3 +110,25 @@ add_action('acf/init', function() {
 
     }
 });
+
+add_action('acf/init', function() {
+    if (function_exists('acf_register_block_type')) {
+
+        acf_register_block_type([
+            'name'              => 'liste-formations',
+            'title'             => __('Liste Formations'),
+            'description'       => __('Bloc liste des formations'),
+            'render_template'   => get_template_directory() . '/blocks/liste-formation/liste-formation.php',
+            'category'          => 'formatting',
+            'icon'              => 'list-view',
+            'mode'              => 'edit',
+            'keywords'          => ['formations', 'liste', 'cours'],
+            'supports'          => [
+                'align' => ['wide', 'full'],
+                'mode'  => false,
+                'jsx'   => true
+            ]
+        ]);
+
+    }
+});
