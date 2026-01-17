@@ -1,0 +1,70 @@
+{
+    "key": "group_696bd097eb220",
+    "title": "<Block> Texte key & Image",
+    "fields": [
+        {
+            "key": "field_696bd099f0db0",
+            "label": "Texte",
+            "name": "text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 1
+        },
+
+        {
+            "key": "field_696bd099f0db0_keys",
+            "label": "Liste des clés",
+            "name": "keys",
+            "type": "repeater",
+            "layout": "row",
+            "button_label": "Ajouter une clé",
+            "sub_fields": [
+                {
+                    "key": "field_696bd099f0db0_key",
+                    "label": "Key",
+                    "name": "key",
+                    "type": "text"
+                },
+                {
+                    "key": "field_696bd099f0db0_key_text",
+                    "label": "Texte de la key",
+                    "name": "key_text",
+                    "type": "text"
+                }
+            ]
+        },
+
+        {
+            "key": "field_696bd112f0db1",
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium"
+        },
+
+        {
+            "key": "field_696bd126f0db2",
+            "label": "Position Image",
+            "name": "position_image",
+            "type": "select",
+            "choices": {
+                "left": "Gauche",
+                "right": "Droite"
+            },
+            "default_value": "left",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/text-key-image"
+            }
+        ]
+    ],
+    "active": true
+}

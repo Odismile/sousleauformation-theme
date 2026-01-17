@@ -154,3 +154,25 @@ add_action('acf/init', function() {
 
     }
 });
+
+add_action('acf/init', function() {
+    if (function_exists('acf_register_block_type')) {
+
+        acf_register_block_type([
+            'name'              => 'text-key-image',
+            'title'             => __('Texte + Clé + Image'),
+            'description'       => __('Bloc texte avec clé, image et CTA'),
+            'render_template'   => get_template_directory() . '/blocks/text-key-image/text-key-image.php',
+            'category'          => 'formatting',
+            'icon'              => 'align-wide',
+            'mode'              => 'edit',
+            'keywords'          => ['texte', 'clé', 'image'],
+            'supports'          => [
+                'align' => ['wide', 'full'],
+                'mode'  => false,
+                'jsx'   => true
+            ]
+        ]);
+
+    }
+});
