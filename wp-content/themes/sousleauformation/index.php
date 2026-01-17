@@ -45,6 +45,8 @@
     endif;
     ?>
 
+    <?php get_template_part('partials/push-loisir'); ?>
+
 </main>
 
 <?php get_footer(); ?>
