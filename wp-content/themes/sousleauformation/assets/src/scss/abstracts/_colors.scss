@@ -1,0 +1,12 @@
+$colors: (
+  primary: #22d3ee,
+  secondary: #172554e6,
+  grey: #e5e7eb,
+  white: #ffffff,
+  dark: #000000,
+);
+
+// Helper
+@function color($name) {
+  @return map-get($colors, $name);
+}

@@ -1,7 +1,33 @@
 @import "bootstrap/scss/bootstrap";
 
 
-body {
-font-family: system-ui, sans-serif;
-// background-color: red;
+/* 1. Abstracts */
+@import "abstracts/variables";
+@import "abstracts/colors";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+/* 2. Bootstrap override */
+:root {
+  --bs-body-font-family: #{$font-sans};
 }
+
+/* 3. Bootstrap */
+@import "bootstrap/scss/bootstrap";
+
+/* 4. Base */
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+
+/* 5. Layout */
+@import "layouts/header";
+@import "layouts/footer";
+
+/* 6. Components */
+@import "components/button";
+@import "components/card";
+
+/* 7. Pages */
+@import "pages/home";
+
