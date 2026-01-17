@@ -66,3 +66,25 @@ add_action('acf/init', function() {
 
     }
 });
+
+add_action('acf/init', function() {
+    if (function_exists('acf_register_block_type')) {
+
+        acf_register_block_type([
+            'name'              => 'temoignage',
+            'title'             => __('Témoignage'),
+            'description'       => __('Bloc de témoignage'),
+            'render_template'   => get_template_directory() . '/blocks/temoignage/temoignage.php',
+            'category'          => 'formatting',
+            'icon'              => 'format-quote',
+            'mode'              => 'edit',
+            'keywords'          => ['témoignage', 'avis', 'citation'],
+            'supports'          => [
+                'align' => ['wide', 'full'],
+                'mode'  => false,
+                'jsx'   => true
+            ]
+        ]);
+
+    }
+});
