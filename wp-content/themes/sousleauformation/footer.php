@@ -20,6 +20,11 @@ s<footer class="bg-dark text-white py-4">
                 <p>+33 (0)6 61 03 82 18 <a href="mailto:sous.leau.formation@gmail.com">sous.leau.formation@gmail.com</a></p>
             </div>
         </div>
+        <div class="row">
+            <dic class="col">
+                <p class="text-center">© 2025 Sous L'eau Formation. Tous droits réservés.</p>
+            </dic>
+        </div>
     </div>
 </footer>
 
