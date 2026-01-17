@@ -1,14 +1,16 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Hero Simple Block
+ * 
+ * @param array $block The block settings and attributes.
+ * @param string $content The block inner HTML (empty).
+ * @param WP_Block $wp_block The block instance.
+ */
 
-
-<main class="container py-5">
-    <?php
-    $title = get_field('title_hero') ?: '';
-    $description = get_field('description_hero') ?: '';
-    $block_id = 'hero-simple-' . uniqid();
-
-    var_dump($title, $description);
-    ?>
+$title = get_field('title') ?: '';
+$description = get_field('description') ?: '';
+$block_id = 'hero-simple-' . uniqid();
+?>
 
 <section id="<?php echo esc_attr($block_id); ?>" class="hero-simple py-5">
     <div class="container">
@@ -25,15 +27,3 @@
         </div>
     </div>
 </section>
-    <?php get_template_part('blocks/hero-simple/hero-simple'); ?>
-    <?php
-    if (have_posts()) :
-        while (have_posts()) : the_post();
-        the_content();
-        endwhile;
-    endif;
-    ?>
-</main>
-
-
-<?php get_footer(); ?>

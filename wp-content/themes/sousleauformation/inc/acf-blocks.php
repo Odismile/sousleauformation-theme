@@ -110,3 +110,25 @@ add_action('acf/init', function() {
 
     }
 });
+
+add_action('acf/init', function() {
+    if (function_exists('acf_register_block_type')) {
+
+        acf_register_block_type([
+            'name'              => 'hero-simple',
+            'title'             => __('Hero Simple'),
+            'description'       => __('Bloc hero simple'),
+            'render_template'   => get_template_directory() . '/blocks/hero-simple/hero-simple.php',
+            'category'          => 'formatting',
+            'icon'              => 'image-flip-horizontal',
+            'mode'              => 'edit',
+            'keywords'          => ['hero', 'simple'],
+            'supports'          => [
+                'align' => ['full'],
+                'mode'  => false,
+                'jsx'   => true
+            ]
+        ]);
+
+    }
+});
