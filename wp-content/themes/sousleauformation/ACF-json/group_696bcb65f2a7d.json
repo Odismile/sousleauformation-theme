@@ -1,0 +1,45 @@
+{
+    "key": "group_696bcb65f2a7d",
+    "title": "<Block> Calendrier",
+    "fields": [
+        {
+            "key": "field_696bcc0000001",
+            "label": "Calendrier",
+            "name": "calendrier",
+            "type": "repeater",
+            "layout": "row",
+            "button_label": "Ajouter une session",
+            "sub_fields": [
+                {
+                    "key": "field_696bcc0000002",
+                    "label": "Lieu",
+                    "name": "location",
+                    "type": "text"
+                },
+                {
+                    "key": "field_696bcc0000003",
+                    "label": "Date",
+                    "name": "date",
+                    "type": "text"
+                },
+                {
+                    "key": "field_696bcc0000004",
+                    "label": "Type de session",
+                    "name": "session_type",
+                    "type": "text"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/calendrier"
+            }
+        ]
+    ],
+    "active": true,
+    "acfe_autosync": ["json"]
+}

@@ -132,3 +132,25 @@ add_action('acf/init', function() {
 
     }
 });
+
+add_action('acf/init', function() {
+    if (function_exists('acf_register_block_type')) {
+
+        acf_register_block_type([
+            'name'              => 'calendrier',
+            'title'             => __('Calendrier'),
+            'description'       => __('Bloc calendrier'),
+            'render_template'   => get_template_directory() . '/blocks/calendrier/calendrier.php',
+            'category'          => 'formatting',
+            'icon'              => 'calendar',
+            'mode'              => 'edit',
+            'keywords'          => ['calendrier', 'date', 'agenda'],
+            'supports'          => [
+                'align' => ['wide', 'full'],
+                'mode'  => false,
+                'jsx'   => true
+            ]
+        ]);
+
+    }
+});

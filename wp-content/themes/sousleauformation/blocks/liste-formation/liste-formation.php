@@ -6,7 +6,6 @@
             <?php while (have_rows('liste_formations')) : the_row(); ?>
                 <div class="col-12">
                     <div class="card">
-
                         <?php
                         $icon = get_sub_field('icone');
                         $title = get_sub_field('title');
