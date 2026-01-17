@@ -27,6 +27,28 @@ add_action('acf/init', function() {
     if (function_exists('acf_register_block_type')) {
 
         acf_register_block_type([
+            'name'              => 'text-tag-image',
+            'title'             => __('Texte + Tag + Image'),
+            'description'       => __('Bloc texte avec tag, image et CTA'),
+            'render_template'   => get_template_directory() . '/blocks/text-tag-image/text-tag-image.php',
+            'category'          => 'formatting',
+            'icon'              => 'align-wide',
+            'mode'              => 'edit',
+            'keywords'          => ['texte', 'tag', 'image'],
+            'supports'          => [
+                'align' => ['wide', 'full'],
+                'mode'  => false,
+                'jsx'   => true
+            ]
+        ]);
+
+    }
+});
+
+add_action('acf/init', function() {
+    if (function_exists('acf_register_block_type')) {
+
+        acf_register_block_type([
             'name'              => 'hero-text',
             'title'             => __('Hero Texte Centré'),
             'description'       => __('Bloc hero avec texte centré'),

@@ -1,0 +1,87 @@
+{
+    "key": "group_696b6f029d88c",
+    "title": "<Block> Texte tag & Image",
+    "fields": [
+        {
+            "key": "field_696b6f03742bd",
+            "label": "Surtitre",
+            "name": "subtitle",
+            "type": "text"
+        },
+        {
+            "key": "field_696b6f04742be",
+            "label": "Titre",
+            "name": "title",
+            "type": "text"
+        },
+        {
+            "key": "field_696b6f41742bf",
+            "label": "Description",
+            "name": "description",
+            "type": "textarea"
+        },
+        {
+            "key": "field_696b6f88888xx",
+            "label": "Tags",
+            "name": "tags",
+            "type": "repeater",
+            "sub_fields": [
+                {
+                    "key": "field_696b6f99999yy",
+                    "label": "Image SVG",
+                    "name": "svg_image",
+                    "type": "image",
+                    "return_format": "id",
+                    "library": "all"
+                },
+                {
+                    "key": "field_696b6f99999xx",
+                    "label": "Tag",
+                    "name": "tag",
+                    "type": "text"
+                }
+            ],
+            "min": 0,
+            "max": 0,
+            "layout": "row"
+        },
+        {
+            "key": "field_696b6f76742c0",
+            "label": "Bouton CTA",
+            "name": "link",
+            "type": "link"
+        },
+        {
+            "key": "field_696b6faaaa001",
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_696b6faaaa002",
+            "label": "Position image",
+            "name": "position_image",
+            "type": "select",
+            "choices": {
+                "left": "Gauche",
+                "right": "Droite",
+                "center": "Centré"
+            },
+            "default_value": "left",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/text-tag-image"
+            }
+        ]
+    ],
+    "active": true
+}
