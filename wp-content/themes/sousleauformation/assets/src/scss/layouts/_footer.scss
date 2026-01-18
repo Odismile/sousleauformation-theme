@@ -1,0 +1,54 @@
+footer {
+    background: rgba(0,0,0,0.9);
+    color: color(white);
+    
+    .footer-top {
+        border-block: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 40px 0;
+    }
+
+    .footer-bottom {
+        padding: 40px 0;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+
+    }
+
+    .footer-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    .footer-p {
+        font-size: 14px;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.8);
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+
+        .menu-item {
+            margin-bottom: 4px;
+
+            a {
+                color: rgba(255, 255, 255, 0.8);
+                text-decoration: none;
+                font-size: 14px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
