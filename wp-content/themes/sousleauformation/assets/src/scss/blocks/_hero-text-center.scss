@@ -1,18 +1,34 @@
 .hero-text-block {
-    background-color: #0891b233;
     margin-top: -84px;
+    position: relative;
+    background-position: center;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        // background-color: rgb(202, 240, 248, .9);
+        background-color: rgb(101 192 211 / 90%);
+    }
+
 
     @media (min-width: $md) {
-        padding-top: 160px;
+        padding-top: 200px;
     }
 
     .inner-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 0;
         color: #0c4a6e;
         text-align: center;
+        position: relative;
+        z-index: 1;
 
         .subtitle {
             font-size: 14px;
@@ -24,8 +40,8 @@
             justify-content: center;
             padding: 4px 16px;
             border-radius: 100px;
-            border: 1px solid #06b6d44d;
-            font-weight: 600;
+            border: 1px solid #164e63;
+            font-weight: 700;
 
             @media (min-width: $md) {
                 font-size: 16px;
@@ -36,7 +52,7 @@
         .title {
             font-size: 32px;
             line-height: 1.2;
-            font-weight: 700;
+            font-weight: 800;
             margin: 20px 0;
 
             @media (min-width: $md) {
@@ -60,6 +76,10 @@
             @media (min-width: $xl) {
                 font-size: 24px;
             }
+        }
+
+        .button-wrapper {
+            margin-top: 30px;
         }
     }
 }
