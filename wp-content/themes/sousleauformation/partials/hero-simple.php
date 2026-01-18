@@ -31,11 +31,11 @@ if (!$title) {
 <section class="hero-simple">
     <div class="container text-center">
         <?php if ($title) : ?>
-            <h1 class="mb-3"><?php echo esc_html($title); ?></h1>
+            <h1 class="title"><?php echo esc_html($title); ?></h1>
         <?php endif; ?>
 
         <?php if ($description) : ?>
-            <p class="lead"><?php echo nl2br(esc_html($description)); ?></p>
+            <p class="description"><?php echo nl2br(esc_html($description)); ?></p>
         <?php endif; ?>
 
     </div>
