@@ -80,6 +80,12 @@
 
         .button-wrapper {
             margin-top: 30px;
+
+            .btn {
+                font-weight: 600;
+                font-size: 22px;
+                padding-inline: 24px;
+            }
         }
     }
 }
