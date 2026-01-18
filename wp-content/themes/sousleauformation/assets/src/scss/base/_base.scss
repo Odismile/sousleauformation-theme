@@ -14,5 +14,9 @@ a {
 }
 
 .section-padding {
-    padding-block: $padding-section-block;
+    padding-block: $padding-section-block-sm;
+
+    @media (min-width: $lg) {
+        padding-block: $padding-section-block;
+    }
 }

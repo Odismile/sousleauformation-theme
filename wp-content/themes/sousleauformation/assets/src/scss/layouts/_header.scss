@@ -12,7 +12,7 @@ header {
       text-transform: uppercase;
       transition: all 0.2s ease;
 
-      @media (min-width: $md) {
+      @media (min-width: $xl) {
         font-size: 24px;
       }
     }
@@ -26,19 +26,23 @@ header {
     }
 
     .menu-item {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
       color: color(white);
       transition: all 0.3s ease;
+
+      @media (min-width: $xl) {
+        font-size: 18px;
+      }
     }
 
-    background-color: color(secondary);
+    background-color: rgb(21,45,94);
 
     body.home & {
       background-color: transparent;
 
       &.sticky {
-        background-color: color(secondary);
+        background-color: rgb(21,45,94);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
     }

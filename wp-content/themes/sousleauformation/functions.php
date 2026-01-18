@@ -26,3 +26,29 @@ add_action('init', function () {
         $labels->name_admin_bar     = 'Loisir';
     }
 });
+
+function get_inline_svg($attachment_id, $class = '') {
+    if (!$attachment_id) {
+        return '';
+    }
+
+    $file = get_attached_file($attachment_id);
+    $mime = get_post_mime_type($attachment_id);
+
+    if ($mime !== 'image/svg+xml' || !file_exists($file)) {
+        return '';
+    }
+
+    $svg = file_get_contents($file);
+
+    if ($class) {
+        $svg = preg_replace(
+            '/<svg\b([^>]*)>/',
+            '<svg$1 class="' . esc_attr($class) . '">',
+            $svg,
+            1
+        );
+    }
+
+    return $svg;
+}

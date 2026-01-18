@@ -1,0 +1,18 @@
+.home {
+  color: color(white);
+
+  main {
+    min-height: 100vh;
+
+    background: linear-gradient(
+      to bottom,
+      #7ad5ea 0%,
+      #6bcde6 20%,
+      #4fb6d6 45%,
+      #1f4f7a 70%,
+      #011733 100%
+    );
+
+    transition: background 0.6s ease;
+  }
+}

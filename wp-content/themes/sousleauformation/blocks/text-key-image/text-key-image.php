@@ -5,7 +5,7 @@ $image = get_field('image');
 $position = get_field('position_image'); // "left" ou "right"
 ?>
 
-<div class="container py-5 text-key-image-block">
+<section class="container text-image-block section-padding">
     <div class="row align-items-center">
 
         <?php if ($image && $position === 'left') : ?>
@@ -16,7 +16,7 @@ $position = get_field('position_image'); // "left" ou "right"
 
         <div class="col-md-6">
             <?php if ($text) : ?>
-                <div class="text-key-description mb-3"><?php echo $text; ?></div>
+                <div class="description-block mb-3"><?php echo $text; ?></div>
             <?php endif; ?>
 
             <?php if ($keys) : ?>
@@ -42,4 +42,4 @@ $position = get_field('position_image'); // "left" ou "right"
         <?php endif; ?>
 
     </div>
-</div>
+</section>

@@ -22,3 +22,71 @@ h1, .title {
         font-size: 60px;
     }
 }
+
+.h2, .title-block {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 24px;
+
+    @media (min-width: $md) {
+        font-size: 36px;
+    }
+
+    @media (min-width: $xl) {
+        font-size: 48px;
+    }
+}
+
+.wysiwyg {
+  p {
+    margin-bottom: 16px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 16px;
+    margin-top: 32px;
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 24px;
+      display: flex;
+      gap: 12px;
+
+      &::before {
+        content: "✔";
+        color: color(white);
+        font-size: 14px;
+        line-height: 1.4;
+        width: 25px;
+        height: 25px;
+        min-width: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: color(primary);
+      }
+    }
+  }
+
+  ol {
+    padding-left: 20px;
+    margin-bottom: 16px;
+    margin-top: 32px;
+
+    li {
+      margin-bottom: 14px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: color(primary);
+    }
+  }
+}
